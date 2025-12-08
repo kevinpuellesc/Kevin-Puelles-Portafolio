@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Kevin Puelles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-white text-gray-600 font-sans">
+
+    <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-gray-900">KEVIN PUELLES</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Inicio</a>
+                <a href="portfolio.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Portafolio</a>
+                <a href="about.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Sobre mí</a>
+                <a href="services.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Servicios</a>
+                <a href="contact.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-900 border-b border-gray-900">Contacto</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-900"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+    
+    <div id="mobile-menu" class="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-8 z-40 hidden opacity-0 transition-opacity duration-300">
+        <a href="index.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Inicio</a>
+        <a href="portfolio.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Portafolio</a>
+        <a href="about.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Sobre mí</a>
+        <a href="services.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Servicios</a>
+        <a href="contact.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Contacto</a>
+    </div>
+
+    <main class="min-h-screen pt-24 pb-20 px-6 flex items-center">
+        <div class="max-w-6xl mx-auto w-full fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Info -->
+                <div class="space-y-12">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-serif text-gray-900 mb-6">Hablemos</h2>
+                        <p class="text-gray-500 font-light text-lg">Estoy disponible para proyectos en toda Europa y encargos internacionales. Cuéntame tu historia.</p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-gray-400 mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-900 uppercase tracking-wider">Estudio</h4>
+                                <p class="text-gray-500 font-light mt-1">Calle de la Luz 24, Madrid<br/>España</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i data-lucide="mail" class="w-6 h-6 text-gray-400 mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-900 uppercase tracking-wider">Email</h4>
+                                <p class="text-gray-500 font-light mt-1">hola@kevinpuelles-foto.com</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start space-x-4">
+                            <i data-lucide="instagram" class="w-6 h-6 text-gray-400 mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-medium text-gray-900 uppercase tracking-wider">Social</h4>
+                                <p class="text-gray-500 font-light mt-1">@kevinpuelles_photo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-gray-50 p-8 md:p-12">
+                    <form onsubmit="event.preventDefault(); alert('Gracias por tu mensaje.');" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Nombre</label>
+                            <input type="text" id="name" class="w-full bg-transparent border-b border-gray-300 py-2 text-gray-900 focus:outline-none focus:border-gray-900 transition-colors" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-transparent border-b border-gray-300 py-2 text-gray-900 focus:outline-none focus:border-gray-900 transition-colors" placeholder="tu@email.com" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Interés</label>
+                            <select id="subject" class="w-full bg-transparent border-b border-gray-300 py-2 text-gray-900 focus:outline-none focus:border-gray-900 transition-colors appearance-none">
+                                <option>Fotografía Documental</option>
+                                <option>Cobertura de Eventos</option>
+                                <option>Retrato Editorial</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs uppercase tracking-widest text-gray-500 mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full bg-transparent border-b border-gray-300 py-2 text-gray-900 focus:outline-none focus:border-gray-900 transition-colors resize-none" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        </div>
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-gray-900 text-white py-4 text-xs uppercase tracking-widest hover:bg-gray-800 transition-colors">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-300 py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-900 uppercase tracking-widest">
+            <p>&copy; 2024 Kevin Puelles Photography.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gray-500 transition-colors">Instagram</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">Twitter</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

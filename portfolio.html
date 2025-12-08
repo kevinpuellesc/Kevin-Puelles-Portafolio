@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Kevin Puelles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-white text-gray-600 font-sans">
+
+    <!-- NAV (Blanco) -->
+    <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-gray-900">KEVIN PUELLES</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Inicio</a>
+                <a href="portfolio.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-900 border-b border-gray-900">Portafolio</a>
+                <a href="about.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Sobre mí</a>
+                <a href="services.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Servicios</a>
+                <a href="contact.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Contacto</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-900"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-8 z-40 hidden opacity-0 transition-opacity duration-300">
+        <a href="index.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Inicio</a>
+        <a href="portfolio.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Portafolio</a>
+        <a href="about.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Sobre mí</a>
+        <a href="services.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Servicios</a>
+        <a href="contact.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Contacto</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="min-h-screen pt-24 pb-20 px-6">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <!-- Header & Filters -->
+            <div class="flex flex-col md:flex-row justify-between items-end border-b border-gray-200 pb-8 fade-in">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-serif text-gray-900 mb-4">Portafolio</h2>
+                    <p class="text-gray-500 font-light max-w-xl">
+                        Una colección de momentos robados al tiempo. Desde la intimidad de lo cotidiano hasta la celebración de lo extraordinario.
+                    </p>
+                </div>
+                <div class="flex space-x-6 mt-6 md:mt-0">
+                    <button class="filter-btn text-sm tracking-widest uppercase transition-colors text-gray-900 font-medium border-b border-gray-900" data-filter="All">Todo</button>
+                    <button class="filter-btn text-sm tracking-widest uppercase transition-colors text-gray-400 hover:text-gray-600" data-filter="Documental">Documental</button>
+                    <button class="filter-btn text-sm tracking-widest uppercase transition-colors text-gray-400 hover:text-gray-600" data-filter="Eventos">Eventos</button>
+                </div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8 fade-in" style="animation-delay: 0.2s;">
+                
+                <!-- Item 1 -->
+                <div class="portfolio-item break-inside-avoid mb-8 group cursor-pointer" data-category="Documental">
+                    <div class="relative overflow-hidden bg-gray-100 mb-4 rounded-sm">
+                        <img src="https://picsum.photos/id/1025/800/600" alt="Project" class="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-95 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 mix-blend-multiply transition-all duration-500 ease-in-out"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-serif text-gray-900 group-hover:text-gray-600 transition-colors">Silencios Urbanos</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Documental</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="portfolio-item break-inside-avoid mb-8 group cursor-pointer" data-category="Documental">
+                    <div class="relative overflow-hidden bg-gray-100 mb-4 rounded-sm">
+                        <img src="https://picsum.photos/id/237/600/800" alt="Project" class="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-95 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 mix-blend-multiply transition-all duration-500 ease-in-out"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-serif text-gray-900 group-hover:text-gray-600 transition-colors">Compañeros de Viaje</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Documental</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="portfolio-item break-inside-avoid mb-8 group cursor-pointer" data-category="Eventos">
+                    <div class="relative overflow-hidden bg-gray-100 mb-4 rounded-sm">
+                        <img src="https://picsum.photos/id/433/800/600" alt="Project" class="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-95 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 mix-blend-multiply transition-all duration-500 ease-in-out"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-serif text-gray-900 group-hover:text-gray-600 transition-colors">Gala Anual</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Eventos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="portfolio-item break-inside-avoid mb-8 group cursor-pointer" data-category="Eventos">
+                    <div class="relative overflow-hidden bg-gray-100 mb-4 rounded-sm">
+                        <img src="https://picsum.photos/id/349/600/800" alt="Project" class="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-95 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 mix-blend-multiply transition-all duration-500 ease-in-out"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-serif text-gray-900 group-hover:text-gray-600 transition-colors">Boda en el Bosque</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Eventos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Item 5 -->
+                <div class="portfolio-item break-inside-avoid mb-8 group cursor-pointer" data-category="Documental">
+                    <div class="relative overflow-hidden bg-gray-100 mb-4 rounded-sm">
+                        <img src="https://picsum.photos/id/1062/800/500" alt="Project" class="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-95 group-hover:opacity-100">
+                         <div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 mix-blend-multiply transition-all duration-500 ease-in-out"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-serif text-gray-900 group-hover:text-gray-600 transition-colors">El Último Oficio</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Documental</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Item 6 -->
+                <div class="portfolio-item break-inside-avoid mb-8 group cursor-pointer" data-category="Eventos">
+                    <div class="relative overflow-hidden bg-gray-100 mb-4 rounded-sm">
+                        <img src="https://picsum.photos/id/669/800/500" alt="Project" class="w-full h-auto object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-105 opacity-95 group-hover:opacity-100">
+                         <div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/20 mix-blend-multiply transition-all duration-500 ease-in-out"></div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-serif text-gray-900 group-hover:text-gray-600 transition-colors">Concierto de Jazz</h3>
+                            <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Eventos</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-300 py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-900 uppercase tracking-widest">
+            <p>&copy; 2024 Kevin Puelles Photography.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gray-500 transition-colors">Instagram</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">Twitter</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Portfolio Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update Button Styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('text-gray-900', 'font-medium', 'border-b', 'border-gray-900');
+                    b.classList.add('text-gray-400', 'hover:text-gray-600');
+                });
+                btn.classList.remove('text-gray-400', 'hover:text-gray-600');
+                btn.classList.add('text-gray-900', 'font-medium', 'border-b', 'border-gray-900');
+
+                // Filter Items
+                const filter = btn.getAttribute('data-filter');
+                items.forEach(item => {
+                    if (filter === 'All' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

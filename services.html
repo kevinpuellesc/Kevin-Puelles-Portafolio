@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Kevin Puelles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-white text-gray-600 font-sans">
+
+    <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-gray-900">KEVIN PUELLES</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Inicio</a>
+                <a href="portfolio.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Portafolio</a>
+                <a href="about.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Sobre mí</a>
+                <a href="services.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-900 border-b border-gray-900">Servicios</a>
+                <a href="contact.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Contacto</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-900"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+    
+    <div id="mobile-menu" class="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-8 z-40 hidden opacity-0 transition-opacity duration-300">
+        <a href="index.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Inicio</a>
+        <a href="portfolio.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Portafolio</a>
+        <a href="about.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Sobre mí</a>
+        <a href="services.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Servicios</a>
+        <a href="contact.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Contacto</a>
+    </div>
+
+    <main class="min-h-screen pt-24 pb-20 px-6">
+        <div class="max-w-6xl mx-auto fade-in">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-serif text-gray-900 mb-6">Servicios</h2>
+                <p class="text-gray-500 font-light max-w-2xl mx-auto">
+                    Propuestas diseñadas para quienes valoran la autenticidad y la estética. Cada proyecto es único y se trata con la máxima dedicación.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group border border-gray-200 p-8 hover:border-gray-400 transition-colors duration-300 bg-white flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <h3 class="text-2xl font-serif text-gray-900 mb-2">Sesión Documental</h3>
+                        <p class="text-gray-400 font-light text-sm mb-6">Desde 300€</p>
+                        <p class="text-gray-600 leading-relaxed mb-8 font-light">Captura la esencia de tu proyecto, viaje o vida cotidiana sin poses forzadas.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>3 horas de cobertura</li>
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>Entrega digital</li>
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>Galería privada</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100">
+                        <a href="contact.html" class="inline-flex items-center text-sm uppercase tracking-widest text-gray-900 group-hover:text-gray-500 transition-colors">
+                            Reservar <i data-lucide="arrow-up-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group border border-gray-200 p-8 hover:border-gray-400 transition-colors duration-300 bg-white flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <h3 class="text-2xl font-serif text-gray-900 mb-2">Cobertura de Eventos</h3>
+                        <p class="text-gray-400 font-light text-sm mb-6">Desde 600€</p>
+                        <p class="text-gray-600 leading-relaxed mb-8 font-light">Para bodas íntimas, conferencias o celebraciones. Una mirada atenta a los detalles.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>Cobertura completa</li>
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>Sin límite de fotos</li>
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>Álbum digital</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100">
+                        <a href="contact.html" class="inline-flex items-center text-sm uppercase tracking-widest text-gray-900 group-hover:text-gray-500 transition-colors">
+                            Reservar <i data-lucide="arrow-up-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group border border-gray-200 p-8 hover:border-gray-400 transition-colors duration-300 bg-white flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <h3 class="text-2xl font-serif text-gray-900 mb-2">Retrato Editorial</h3>
+                        <p class="text-gray-400 font-light text-sm mb-6">Desde 150€</p>
+                        <p class="text-gray-600 leading-relaxed mb-8 font-light">Retratos con carácter para profesionales, artistas o uso personal.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>1 hora de sesión</li>
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>Luz natural</li>
+                            <li class="flex items-start text-sm text-gray-500"><span class="mr-2 text-gray-300">•</span>10 fotos retocadas</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-gray-100">
+                        <a href="contact.html" class="inline-flex items-center text-sm uppercase tracking-widest text-gray-900 group-hover:text-gray-500 transition-colors">
+                            Reservar <i data-lucide="arrow-up-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-24 bg-gray-50 p-12 text-center">
+                <h3 class="text-xl font-serif text-gray-900 mb-4">¿Buscas algo a medida?</h3>
+                <p class="text-gray-500 font-light mb-8">Entiendo que cada historia es diferente. Contáctame para discutir proyectos personalizados.</p>
+                <a href="contact.html" class="text-gray-900 border-b border-gray-900 pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors uppercase text-xs tracking-widest">
+                    Iniciar Conversación
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-300 py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-900 uppercase tracking-widest">
+            <p>&copy; 2024 Kevin Puelles Photography.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gray-500 transition-colors">Instagram</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">Twitter</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

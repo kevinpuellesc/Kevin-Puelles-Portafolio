@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Puelles | Fotografía Documental</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes Google -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Estilos Propios -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Configuración Tailwind -->
     <script>
       tailwind.config = {
         theme: {
@@ -16,15 +23,6 @@
             },
             colors: {
               gray: {
-                50: '#f9fafb',
-                100: '#f3f4f6',
-                200: '#e5e7eb',
-                300: '#d1d5db',
-                400: '#9ca3af',
-                500: '#6b7280',
-                600: '#4b5563',
-                700: '#374151',
-                800: '#1f2937',
                 900: '#111827',
               }
             }
@@ -32,51 +30,111 @@
         }
       }
     </script>
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: white;
-        color: #4b5563; /* gray-600 */
-      }
-      .font-serif {
-        font-family: 'Playfair Display', serif;
-      }
-      /* Custom scrollbar for clean look */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #e5e7eb;
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #d1d5db;
-      }
-      .fade-in {
-        animation: fadeIn 0.8s ease-in forwards;
-      }
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-    </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+<body class="bg-gray-900 overflow-hidden">
+
+    <!-- NAV (Transparente en Home) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 bg-transparent" data-is-home="true">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" id="nav-logo" class="font-serif text-2xl tracking-widest z-50 text-white mix-blend-difference transition-colors duration-300">
+                KEVIN PUELLES
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="nav-link text-sm tracking-widest uppercase transition-colors duration-200 text-white border-b border-white">Inicio</a>
+                <a href="portfolio.html" class="nav-link text-sm tracking-widest uppercase transition-colors duration-200 text-gray-200 hover:text-white">Portafolio</a>
+                <a href="about.html" class="nav-link text-sm tracking-widest uppercase transition-colors duration-200 text-gray-200 hover:text-white">Sobre mí</a>
+                <a href="services.html" class="nav-link text-sm tracking-widest uppercase transition-colors duration-200 text-gray-200 hover:text-white">Servicios</a>
+                <a href="contact.html" class="nav-link text-sm tracking-widest uppercase transition-colors duration-200 text-gray-200 hover:text-white">Contacto</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 focus:outline-none text-white transition-colors duration-300">
+                <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-8 z-40 hidden opacity-0 transition-opacity duration-300">
+        <a href="index.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Inicio</a>
+        <a href="portfolio.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Portafolio</a>
+        <a href="about.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Sobre mí</a>
+        <a href="services.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Servicios</a>
+        <a href="contact.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Contacto</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="relative h-screen w-full overflow-hidden">
+        <!-- 
+             IMÁGENES DEL SLIDER
+             Para usar tus propias fotos:
+             1. Crea una carpeta llamada 'img' junto a este archivo.
+             2. Pon tus fotos dentro con los nombres: portada-1.jpg, portada-2.jpg, etc.
+             
+             (Si no tienes las fotos aún, estas líneas de abajo usarán placeholders de internet como respaldo si falla la carga local, 
+             pero están configuradas para buscar primero en 'img/')
+        -->
+        <div class="slider-image absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 bg-gray-900" 
+             style="background-image: url('img/portada-1.jpg'), url('https://picsum.photos/id/15/1920/1080'); background-size: cover; background-position: center;"></div>
+             
+        <div class="slider-image absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-gray-900" 
+             style="background-image: url('img/portada-2.jpg'), url('https://picsum.photos/id/250/1920/1080'); background-size: cover; background-position: center;"></div>
+             
+        <div class="slider-image absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 bg-gray-900" 
+             style="background-image: url('img/portada-3.jpg'), url('https://picsum.photos/id/1015/1920/1080'); background-size: cover; background-position: center;"></div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/20"></div>
+
+        <!-- Content -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-10">
+            <div class="max-w-4xl space-y-6 fade-in">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl text-white font-serif tracking-tight leading-tight drop-shadow-lg">
+                    Capturando la Verdad
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 font-light tracking-widest uppercase drop-shadow-md">
+                    Fotografía documental y narrativa visual
+                </p>
+                <div class="pt-10">
+                    <a href="portfolio.html" class="inline-flex items-center space-x-2 text-white border border-white/30 px-8 py-3 hover:bg-white hover:text-gray-900 transition-all duration-300 tracking-widest uppercase text-sm">
+                        <span>Ver Portafolio</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Preview -->
+        <div class="absolute bottom-0 w-full hidden md:flex border-t border-white/10 backdrop-blur-sm z-20">
+            <a href="portfolio.html" class="flex-1 p-6 text-white/80 hover:bg-white/10 transition-colors cursor-pointer border-r border-white/10 block text-left">
+                <h3 class="uppercase text-xs tracking-widest mb-1 text-gray-400">Último Proyecto</h3>
+                <p class="font-serif">Silencios Urbanos</p>
+            </a>
+            <a href="services.html" class="flex-1 p-6 text-white/80 hover:bg-white/10 transition-colors cursor-pointer border-r border-white/10 block text-left">
+                <h3 class="uppercase text-xs tracking-widest mb-1 text-gray-400">Servicios</h3>
+                <p class="font-serif">Documental & Eventos</p>
+            </a>
+            <a href="contact.html" class="flex-1 p-6 text-white/80 hover:bg-white/10 transition-colors cursor-pointer block text-left">
+                <h3 class="uppercase text-xs tracking-widest mb-1 text-gray-400">Contacto</h3>
+                <p class="font-serif">Disponible: Octubre 2023</p>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

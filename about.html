@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí | Kevin Puelles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-white text-gray-600 font-sans">
+
+    <nav id="navbar" class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="font-serif text-2xl tracking-widest text-gray-900">KEVIN PUELLES</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Inicio</a>
+                <a href="portfolio.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Portafolio</a>
+                <a href="about.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-900 border-b border-gray-900">Sobre mí</a>
+                <a href="services.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Servicios</a>
+                <a href="contact.html" class="nav-link text-sm tracking-widest uppercase transition-colors text-gray-500 hover:text-gray-900">Contacto</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-900"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+    
+    <div id="mobile-menu" class="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-8 z-40 hidden opacity-0 transition-opacity duration-300">
+        <a href="index.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Inicio</a>
+        <a href="portfolio.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Portafolio</a>
+        <a href="about.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Sobre mí</a>
+        <a href="services.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Servicios</a>
+        <a href="contact.html" class="text-2xl font-serif text-gray-800 hover:text-gray-500">Contacto</a>
+    </div>
+
+    <main class="min-h-screen pt-24 pb-20 px-6">
+        <div class="max-w-5xl mx-auto fade-in">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <!-- Image -->
+                <div class="relative order-2 md:order-1">
+                    <div class="aspect-[3/4] bg-gray-100 overflow-hidden">
+                        <img src="https://picsum.photos/id/338/800/1200" alt="Kevin Puelles" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 border border-gray-200 -z-10 hidden md:block"></div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="order-1 md:order-2 space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-serif text-gray-900 leading-tight">
+                        Observador de <br />
+                        <span class="italic text-gray-500">lo invisible</span>
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-600 font-light leading-relaxed">
+                        <p>Hola, soy Kevin. Mi fotografía nace de la curiosidad y el respeto por la realidad. No busco crear momentos, sino estar presente cuando suceden.</p>
+                        <p>Con más de 10 años de experiencia recorriendo el mundo y documentando eventos, he aprendido que las mejores imágenes son aquellas que cuentan una historia honesta. Mi estilo se define por el uso de la luz natural, composiciones limpias y una edición atemporal.</p>
+                        <p>Me especializo en fotografía documental y eventos sociales, buscando siempre la belleza en lo espontáneo y la elegancia en la simplicidad.</p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-100">
+                        <div class="text-center md:text-left">
+                            <i data-lucide="camera" class="w-6 h-6 text-gray-400 mb-2 mx-auto md:mx-0"></i>
+                            <h4 class="text-sm font-medium text-gray-900">Equipo</h4>
+                            <p class="text-xs text-gray-500 mt-1">Sony Alpha & Leica</p>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <i data-lucide="heart" class="w-6 h-6 text-gray-400 mb-2 mx-auto md:mx-0"></i>
+                            <h4 class="text-sm font-medium text-gray-900">Pasión</h4>
+                            <p class="text-xs text-gray-500 mt-1">Narrativa Visual</p>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <i data-lucide="globe" class="w-6 h-6 text-gray-400 mb-2 mx-auto md:mx-0"></i>
+                            <h4 class="text-sm font-medium text-gray-900">Base</h4>
+                            <p class="text-xs text-gray-500 mt-1">Madrid, España</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-300 py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-900 uppercase tracking-widest">
+            <p>&copy; 2024 Kevin Puelles Photography.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gray-500 transition-colors">Instagram</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">Twitter</a>
+                <a href="#" class="hover:text-gray-500 transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
